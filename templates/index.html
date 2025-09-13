@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Driver UID</th>
+            <th>Full name</th>
+            <th>Phone</th>
+            <th>Vehicule</th>
+            <th>Rating</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        
+        {% for dummies in dummy_driver %}
+        <tr>
+            <td>{{dummies.id}}</td>
+            <td>{{dummies.name}}</td>
+            <td>{{dummies.phone_number}}</td>
+            <td>{{dummies.vehicule}}</td>
+            <td>{{dummies.rating}}</td>
+            <td>{{dummies.status}}</td>
+            <td>
+            <a href="{{ url_for('bug', driver_id=dummies.id) }}" class="report-btn">Detail</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

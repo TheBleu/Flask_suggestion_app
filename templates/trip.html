@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='trip.css') }}">
+    <title>Document</title>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Device ID</th>
+            <th>Requested time</th>
+            <th>Status</th>
+            <th>Pickup and Destination</th>
+            <th>Price</th>
+            <th>Payment Method</th>
+            <th>Driver</th>
+            <th>Rider</th>
+            <th>Service</th>
+            <th>ServiceType</th>
+        </tr>
+
+        {% for trip in trips %}
+        <tr>
+                <td>{{trip.trip_id}}</td>
+                <td>{{trip.date}} {{trip.time}}</td>
+                <td>{{trip.status}}</td>
+                <td>{{trip.depart}} vers {{trip.destination}}</td>
+                <td>{{trip.price}}</td>
+                <td>{{trip.payment_method}}</td>
+                <td>{{trip.driver}}</td>
+                <td>{{trip.rider}}</td>
+                <td>{{trip.service}}</td>
+                <td>{{trip.service_type}}</td>
+                <td>
+                    <a href="{{ url_for('issue', ride_id=trip.trip_id) }}" class="signaler-btn">Signaler</a>
+                </td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

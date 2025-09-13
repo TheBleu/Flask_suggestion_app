@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='issue.css') }}">
+</head>
+<body>
+    <form action="" method="post">
+        <!-- Reported By + Rider Number -->
+        <div class="row">
+            <div>
+                <p>Reported By</p>
+                <input type="text" name="reported-by" value="Rider">
+            </div>
+            <div>
+                <p>Rider's Number</p>
+                <input type="text" name="rider-number" value="{{ ride.rider_num }}">
+            </div>
+        </div>
+
+        <!-- Family + Category + Type -->
+        <div class="row">
+            <div>
+                <p>Family</p>
+                <input type="text" name="Family" value="Reclamation">
+            </div>
+            <div>
+                <p>Category</p>
+                <input type="text" name="Category" value="Client Yassir">
+            </div>
+            <div>
+                <p>Type</p>
+                <input type="text" name="Type" value="Retour Qualité Partenaire">
+            </div>
+        </div>
+
+        <!-- Trip ID -->
+        <div>
+            <p>Trip ID</p>
+            <input type="text" name="trip_id" value="{{ride.trip_id}}">
+        </div>
+
+        <!-- Description + Feedback -->
+        <div class="row">
+            <div>
+                <p>Description</p>
+                <textarea name="description"></textarea>
+            </div>
+            <div>
+                <p>Feedback</p>
+                <textarea name="feedback"></textarea>
+            </div>
+        </div>
+
+        <!-- Wilaya + Gravité + Priority -->
+        <div class="row">
+            <div style="flex: 1;">
+                <p>Wilaya</p>
+                <input type="text" name="wilaya" value="{{ride.wilaya}}">
+            </div>
+            <div style="flex: 1;">
+                <p>Gravité</p>
+                <select name="Gravité">
+                    <option value="souhait">souhait</option>
+                    <option value="mineur">mineur</option>
+                    <option value="normale">normale</option>
+                    <option value="important">important</option>
+                    <option value="critique">critique</option>
+                </select> 
+            </div>
+            <div style="flex: 1;">
+                <p>Priority</p>
+                <select name="Priority">
+                    <option value="Faible">Faible</option>
+                    <option value="normale">Normale</option>
+                    <option value="important">Haute</option>
+                </select> 
+            </div>
+        </div>
+
+        <!-- Affecte a -->
+        <div>
+            <p>Affecte à</p>
+            <select name="Affecte a">
+                <option value="Driver and rider complaints">Driver and rider complaints</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="button" class="cancel">Cancel</button>
+            <button type="submit" class="save">Save</button>
+        </div>
+    </form>
+</body>
+</html>

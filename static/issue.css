@@ -1,0 +1,98 @@
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    margin: 0;
+}
+
+/* Form styling */
+form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Rows for grouping inputs */
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Make inputs inside rows flexible */
+.row > div {
+    flex: 1;
+}
+
+/* Labels */
+p {
+    margin: 0 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Inputs, selects, textarea */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Cancel button */
+button.cancel {
+    background-color: #e75480; /* reddish-pink */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+button.cancel:hover {
+    background-color: #d0436e;
+}
+
+/* Save button */
+button.save {
+    background-color: #4caf50; /* green */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+button.save:hover {
+    background-color: #3e8e41;
+}
+

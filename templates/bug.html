@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bug.css') }}">
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Device ID</th>
+            <th>Platform</th>
+            <th>Last Used</th>
+            <th>Model</th>
+            <th>OS version</th>
+            <th>App Version</th>
+            <th>Device language</th>
+            <th>App language</th>
+            <th>Action</th>
+        </tr>
+        
+        <tr>
+            
+            <td>{{dummy.id}}</td>
+            <td>{{dummy.phone_OS}}</td>
+            <td>{{dummy.last_used}}</td>
+            <td>{{dummy.model}}</td>
+            <td>{{dummy.os_version}}</td>
+            <td>{{dummy.app_version}}</td>
+            <td>{{dummy.device_lang}}</td>
+            <td>{{dummy.app_lang}}</td>
+            <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSezWaUO6B4USTCwBm8wDERLYCvZ2Cgn7UJifquT_o4EFf9alA/viewform?usp=pp_url&entry.731250797={{ dummy.user }}
+                &entry.363844751={{ dummy.id }}
+                &entry.2030252651={{ dummy.wilaya }}
+                &entry.971374286={{ dummy.phone_OS }}
+                &entry.705741249={{dummy.app_version}}" target="_blank" class="report-btn">report</a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    background-color: #f3e8ff; /* light purple */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #c084fc; /* purple header */
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f9f5ff;
+}
+
+h1 {
+    text-align: center;
+    color: #6b21a8;
+    margin-top: 20px;
+}
+
+/* Report Button */
+/* Report Button */
+.report-btn {
+    background-color: #6b21a8; /* deep purple */
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none; /* removes underline */
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.report-btn:hover {
+    background-color: #9333ea; /* lighter purple hover */
+    transform: scale(1.05);
+}
+
+
